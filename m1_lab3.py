@@ -22,7 +22,8 @@ tables = site_connect.get_tables(5)
 
 #Variavél para somatória de votos
 total = 0 
-
+print("Tivemos os seguintes votos: ")
+print()
 for linha in tables[1:]:
 
     # Obtendo o numo de votos do cantidato
@@ -35,8 +36,11 @@ for linha in tables[1:]:
    
     num = voto.split(" ")
 
+    print(linha[2])
+
     # somando com o total  com o num[0] que tem os votos
     total = total + float(num[0])
 
 # Imprimindo o total de votos
+print()
 print("Segue o total de votos: ", total)
